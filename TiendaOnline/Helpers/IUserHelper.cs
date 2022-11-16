@@ -12,7 +12,7 @@ namespace TiendaOnline.Helpers
 
         Task<IdentityResult> AddUserAsync(User user, string password);
 
-        Task<User> AddUserAsync(AddUserViewModel model);
+        Task<User> AddUserAsync(AddUserViewModel model,string path);
 
         Task CheckRoleAsync(string roleName);
 

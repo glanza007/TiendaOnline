@@ -26,7 +26,7 @@ namespace TiendaOnline.Helpers
             return await _userManager.CreateAsync(user, password);
         }
 
-        public async Task<User> AddUserAsync(AddUserViewModel model)
+        public async Task<User> AddUserAsync(AddUserViewModel model,string path)
         {
             User user = new()
             {
@@ -35,7 +35,7 @@ namespace TiendaOnline.Helpers
                 Email = model.Username,
                 FirstName = model.FirstName,
                 LastName = model.LastName,
-                ImageId = model.ImageId,
+                ImageUrl = path,
                 PhoneNumber = model.PhoneNumber,
                 City = await _context.Cities.FindAsync(model.CityId),
                 UserName = model.Username,
