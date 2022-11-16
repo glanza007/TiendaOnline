@@ -24,7 +24,7 @@ namespace TiendaOnline
             builder.Services.AddIdentity<User, IdentityRole>(cfg =>
             {
                 cfg.Tokens.AuthenticatorTokenProvider = TokenOptions.DefaultAuthenticatorProvider;
-                cfg.SignIn.RequireConfirmedEmail = true;
+                cfg.SignIn.RequireConfirmedEmail = false;
                 cfg.User.RequireUniqueEmail = true;
                 cfg.Password.RequireDigit = true;
                 cfg.Password.RequiredUniqueChars = 0;
